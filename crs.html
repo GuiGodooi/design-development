@@ -1,0 +1,117 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+    .swiper{
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper-slide{
+        width: 100%;
+        height: auto;
+    }
+
+    .container{
+        width: 480px;
+        height: 180px;
+        background-color: rgb(25, 60, 89);
+        display: flex;
+        gap: 20px;
+        border-radius: 12px;
+        display: flex;
+    }
+
+    .container .foto-prato{
+        background-image: url('https://pousadaserradossicalis.com.br/wp-content/uploads/2024/05/73a9d99a-5f42-450a-a552-ef3dd96e7d15.jpeg');
+        height: 180px;
+        width: 180px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 12px;
+    }
+
+    .container .texto{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 180px;
+        justify-content: center;
+    }
+
+    .texto h2{
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .texto p{
+        font-size: 17px;
+        line-height: 1.2em;
+        font-weight: 300;
+    }
+    .texto a{
+        font-size: 18px;
+        line-height: 2em;
+        font-weight: 600;
+        color: yellow;
+    }
+
+
+
+</style>
+
+<div class="carrossel-websites swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="foto-prato">
+                </div>
+                <div class="texto">
+                    <h2>Beringela À Parmegiana</h2>
+                    <p>acompanha arroz, batata frita e salada</p>
+                    <a href="#">VER CARDÁPIO</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="foto-prato">
+                </div>
+                <div class="texto">
+                    <h2>Beringela À Parmegiana</h2>
+                    <p>acompanha arroz, batata frita e salada</p>
+                    <a href="#">VER CARDÁPIO</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="foto-prato">
+                </div>
+                <div class="texto">
+                    <h2>Beringela À Parmegiana</h2>
+                    <p>acompanha arroz, batata frita e salada</p>
+                    <a href="#">VER CARDÁPIO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+      swiper = new Swiper('.carrossel-websites' , {
+        spaceBetween: 64,
+        grabCursor: true,
+        speed: 900,
+        autoHeigt: true,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+    })
+</script>
