@@ -34,7 +34,7 @@
             <p>Preço: R$ XX,XX</p>
         </div>
         <div class="menu-item">
-            <img src="https://pousadaserradossicalis.com.br/wp-content/uploads/2024/05/7a8a2a7c-cf86-4e54-8293-1a1fa0ab1258.jpeg" alt="Berinjela à Parmegiana">
+            <img src="https://pousadaserradossicalis.com.br/wp-content/uploads/2024/05/73a9d99a-5f42-450a-a552-ef3dd96e7d15.jpeg" alt="Berinjela à Parmegiana">
             <h2>Berinjela à Parmegiana</h2>
             <p>Descrição do prato e acompanhamentos.</p>
             <p>Preço: R$ XX,XX</p>
@@ -61,6 +61,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #FAFAFA;
+    color: #283926;
 }
 
 header {
@@ -68,8 +70,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #4E6D5E;
+    color: #FAFAFA;
 }
 
 nav ul {
@@ -81,14 +83,14 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #FAFAFA;
     text-decoration: none;
 }
 
 .hero {
     position: relative;
     text-align: center;
-    color: white;
+    color: #FAFAFA;
 }
 
 .hero img {
@@ -96,21 +98,12 @@ nav ul li a {
     height: auto;
 }
 
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
 .categories {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #4E6D5E;
+    color: #FAFAFA;
 }
 
 .category {
@@ -122,24 +115,28 @@ nav ul li a {
 }
 
 .category:hover {
-    background-color: #ddd;
+    background-color: #283926;
 }
 
 .menu {
     display: flex;
+    margin: 50px;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 60px;
     padding: 20px;
     justify-content: center;
+    background-color: #FAFAFA;
 }
 
 .menu-item {
     flex: 1 1 calc(33.333% - 40px);
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    background-color: #FAFAFA;
+    border-radius: 12px;
 }
 
 .menu-item:hover {
@@ -149,11 +146,12 @@ nav ul li a {
 .menu-item img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #4E6D5E;
+    color: #FAFAFA;
     text-align: center;
     padding: 20px;
 }
@@ -192,11 +190,7 @@ footer .social-icons {
     .menu-item {
         flex: 1 1 calc(100% - 40px);
     }
-
-    .hero-text {
-        width: 80%;
-        padding: 20px;
-    }
 }
+
 
 </style>
