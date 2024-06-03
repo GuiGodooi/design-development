@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serra dos Sicalis Restaurante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Serra dos Sicalis Restaurante</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Cardápio</a></li>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="categories">
+        <div class="category">Prato-Chef</div>
+        <div class="category">À Parmegianas da Casa</div>
+        <div class="category">Outros Pratos</div>
+    </section>
+
+    <section class="menu">
+        <div class="menu-item">
+            <img src="https://pousadaserradossicalis.com.br/wp-content/uploads/2024/05/874c40b4-439b-4c8b-8c54-da2057e8ebb5.jpeg" alt="Mix de Linguiçinha">
+            <h2>Mix de Linguiçinha de Frango e Porco</h2>
+            <p>Descrição do prato e acompanhamentos.</p>
+            <p>Preço: R$ XX,XX</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://pousadaserradossicalis.com.br/wp-content/uploads/2024/05/7a8a2a7c-cf86-4e54-8293-1a1fa0ab1258.jpeg" alt="Berinjela à Parmegiana">
+            <h2>Berinjela à Parmegiana</h2>
+            <p>Descrição do prato e acompanhamentos.</p>
+            <p>Preço: R$ XX,XX</p>
+        </div>
+        <!-- Mais itens de menu aqui -->
+    </section>
+
+    <footer>
+        <p>Serra dos Sicalis Restaurante</p>
+        <p>Estrada Municipal Francisco Honório de Lima, 88, Bairro da Serra, Serra Negra – SP, 13930-000, Brasil</p>
+        <p>Contato: (XX) XXXXX-XXXX</p>
+        <div class="social-icons">
+            <!-- Ícones de redes sociais -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.category {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category:hover {
+    background-color: #ddd;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    flex: 1 1 calc(33.333% - 40px);
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+/* Estilos para mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category {
+        padding: 15px;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .menu-item {
+        flex: 1 1 calc(100% - 40px);
+    }
+
+    .hero-text {
+        width: 80%;
+        padding: 20px;
+    }
+}
+
+</style>
