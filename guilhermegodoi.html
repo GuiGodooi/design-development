@@ -29,6 +29,36 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="left-cont">
+            <h2>Nome do Projeto</h2>
+            <p>Um breve resumo sobre o projeto e 
+                ferramentas utilizadas na construção
+                do site.
+            </p>
+            <a href="#">
+                SAIBA MAIS >
+            </a>
+        </div>
+
+        <div class="center">
+            <div class="img">
+
+            </div>
+        </div>
+
+        <div class="right-cont">
+            <div class="line-content">
+                <hr><b>PROJETOS</b><hr>
+            </div>
+            <div class="big-number">
+                <h3>
+                    01
+                </h3>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -63,6 +93,10 @@
 
     a{
         font-size: 1.2rem;
+        background-color: #4a1b74;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
     }
 
     .container{
@@ -89,8 +123,10 @@
     }
 
     .links-cont{
-        display: flex wrap;
+        display: flex;
+        flex-wrap: wrap;
         width: 100%;
+        gap: 12px;
     }
 
     .container .right-cont .img{
@@ -102,5 +138,16 @@
         border-radius: 10px;
     }
 
+    .line-content{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    hr{
+        flex: 1;
+        margin: 0px 12px;
+        border: 1.5px solid #4a1b74;
+    }
 
 </style>
