@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Carrossel Valorant Personagens</title>
+</head>
+
+<body>
+    <div class="swiper valorant-carrossel">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="img-content">
+                    <img src="personagens\breach.png" alt="breach">
+                </div>
+                <div class="title-content">
+                    <h1>
+                        Breach
+                    </h1>
+                    <p>
+                        <b>Função:</b> Iniciador<br>
+                        <b>Nacionalidade:</b> Suécia<br>
+                        <b>Principais forças:</b> Muitas ferramentas para iniciar um avanço<br>
+                        <b>Fraquezas:</b> Baixa mobilidade
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img-content">
+                    <img src="personagens\brimstone.png" alt="brimstone">
+                </div>
+                <div class="title-content">
+                    <h1>
+                        Brimstone
+                    </h1>
+                    <p>
+                        <b>Função:</b> Controlador<br>
+                        <b>Nacionalidade:</b> Estados Unidos<br>
+                        <b>Principais forças:</b> Controla muito o terreno com bombas de fumaça e granadas<br>
+                        <b>Fraquezas:</b> Não é tão ágil como os demais agentes
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img-content">
+                    <img src="personagens\jett.png" alt="jett">
+                </div>
+                <div class="title-content">
+                    <h1>
+                        Jett
+                    </h1>
+                    <p>
+                        <b>Função:</b> Duelista<br>
+                        <b>Nacionalidade:</b> Coreia do Sul<br>
+                        <b>Principais forças:</b> Altíssima mobilidade<br>
+                        Fraquezas: Difícil para se especializar
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img-content">
+                    <img src="personagens\killjoy.png" alt="killjoy">
+                </div>
+                <div class="title-content">
+                    <h1>
+                        Killjoy
+                    </h1>
+                    <p>
+                        <b>Função:</b> Sentinela<br>
+                        <b>Nacionalidade:</b> Alemanha<br>
+                        <b>Principais forças:</b> Causa dano com seus equipamentos<br>
+                        <b>Fraquezas:</b> Poucas habilidades para o confronto direto
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img-content">
+                    <img src="personagens\neon.png" alt="neon">
+                </div>
+                <div class="title-content">
+                    <h1>
+                        NEON
+                    </h1>
+                    <p>
+                        <b>Função:</b> Duelista<br>
+                        <b>Nacionalidade:</b> Filipinas<br>
+                        <b>Principais forças:</b> Velocidade<br>
+                        <b>Fraquezas:</b> Vulnerável sem as suas magias
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img-content">
+                    <img src="personagens\phoenix.png" alt="phoenix">
+                </div>
+                <div class="title-content">
+                    <h1>
+                        Phoenix
+                    </h1>
+                    <p>
+                        <b>Função:</b> Duelista<br>
+                        <b>Nacionalidade:</b> Reino Unido<br>
+                        <b>Principais forças:</b> Trabalha com dano e cura própria<br>
+                        <b>Fraquezas:</b> Baixa mobilidade
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    * {
+        color: #FFFFFF;
+        margin: 0;
+        font-family: 'Yatra One', system-ui;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        border: 1px solid red;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    b {
+        font-weight: 500;
+    }
+
+    img {
+        height: 100%;
+        width: 200px;
+    }
+
+    .swiper {
+        width: 100%;
+        background-color: black;
+    }
+
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    swiper = new Swiper('.valorant-carrossel' , {
+        spaceBetween: 26,
+        loop: true,
+        autoplay: true,
+        grabCursor: true,
+    })
+</script>
