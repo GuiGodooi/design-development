@@ -108,7 +108,6 @@
                 </div>
             </div>
         </div>
-        <div class="swiper-pagination"></div>
     </div>
 </body>
 
@@ -116,6 +115,7 @@
 
 <style>
     * {
+
         color: #FFFFFF;
         margin: 0;
         font-family: 'Yatra One', system-ui;
@@ -125,6 +125,7 @@
         font-size: 30px;
         font-weight: 700;
         text-align: center;
+        padding: 40px 0px;
     }
 
     h2 {
@@ -138,6 +139,7 @@
         border: 1px solid red;
         padding: 20px;
         border-radius: 20px;
+        width: 300px;
     }
 
     b {
@@ -145,8 +147,12 @@
     }
 
     img {
-        height: 100%;
+        height: auto;
         width: 200px;
+        object-fit: cover;
+        background-color: #FFFFFF08;
+        border-radius: 30px;
+        padding: 20px;
     }
 
     .swiper {
@@ -160,16 +166,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 60px;
+        gap: 40px;
+        padding: 60px 0px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('https://i.pinimg.com/736x/1c/51/4a/1c514a1dc5ef48117569f13b72e22a16.jpg');
+    }
+
+    .title-content {
+        background-color: #FFFFFF10;
+        padding: 10px;
+        border-radius: 20px;
     }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    swiper = new Swiper('.valorant-carrossel' , {
-        spaceBetween: 26,
+    swiper = new Swiper('.valorant-carrossel', {
+        spaceBetween: 64,
         loop: true,
-        autoplay: true,
         grabCursor: true,
+        autoplay: true,
     })
 </script>
