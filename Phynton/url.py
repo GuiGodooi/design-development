@@ -29,7 +29,7 @@ def get_all_urls(base_url, depth=1):
     return urls
 
 # Use the function
-base_url = 'https://hjgodoi.com.br'
+base_url = 'https://seudominio.com.br'
 urls = get_all_urls(base_url)
 for url in urls:
     print(url)
