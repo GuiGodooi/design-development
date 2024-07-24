@@ -1,9 +1,32 @@
 <style>
+    .carrossel-aboutus{
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .carrossel-aboutus h2{
+        font-size: 30px;
+        line-height: 37px;
+        font-weight: 500;
+    }
+
+    .carrossel-aboutus h3{
+        font-size: 40px;
+        line-height: 49px;
+        font-weight: 500;
+    }
+
+    .carrossel-aboutus span{
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 300;
+    }
+
     .container{
         width: 100%;
         height: 600px;
         display: flex;
     }
+
     
     .left-content{
         display: flex;
@@ -31,17 +54,82 @@
     .foto1, .foto2, .foto3, .foto4{
         height: 245px;
         width: 240px;
-        border-radius: 8px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         border-radius: 8px;
     }
 
-    .foto2, .foto3{
+    .foto2{
+        border: 4px solid #1F1F1F;
+    }
+
+    .foto3{
         border: 4px solid #931319;
     }
-    
+
+    /* Create style for mobile response */
+    @media (max-width: 794px){
+
+        .container{
+            flex-direction: column-reverse;
+            height: 600px;
+        }
+
+        .carrossel-aboutus h2{
+            font-size: 30px;
+            line-height: 37px;
+            font-weight: 500;
+        }
+
+        .carrossel-aboutus h3{
+            font-size: 40px;
+            line-height: 49px;
+            font-weight: 500;
+        }
+
+        .carrossel-aboutus span{
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 300;
+        }
+
+        .left-content{
+            width: 100%;
+            height: auto;
+            margin: 0px;
+        }
+
+        .right-content{
+            width: 100%;
+            height: 300px;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .grid-content{
+            height: auto;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .foto1, .foto2, .foto3, .foto4{
+            height: 130px !important;
+            width: 127px !important;
+        }
+        
+        .foto2{
+            border: 2px solid #1F1F1F;
+        }
+
+        .foto3{
+            border: 2px solid #931319;
+        }
+
+
+
+    }
+
 </style>
 
 <div class="carrossel-aboutus swiper">
@@ -100,3 +188,7 @@
         
     })
 </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
