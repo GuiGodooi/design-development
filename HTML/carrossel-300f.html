@@ -1,0 +1,102 @@
+<style>
+    .container{
+        width: 100%;
+        height: 600px;
+        display: flex;
+    }
+    
+    .left-content{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 50%;
+        margin-left: 60px;
+    }
+    
+    .right-content{
+        height: 600px;
+        width: 50%;
+    }
+
+    .grid-content{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .foto1, .foto2, .foto3, .foto4{
+        height: 245px;
+        width: 240px;
+        border-radius: 8px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 8px;
+    }
+
+    .foto2, .foto3{
+        border: 4px solid #931319;
+    }
+    
+</style>
+
+<div class="carrossel-aboutus swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="left-content">
+                    <h2>Conselho Grupo 300</h2>
+                    <h3>Leonarco Castelo</h3>
+                    <span>CEO 300 GROUP</span>
+                    <h3>Leonadro Castelo</h3>
+                    <span>Vice-presidente 300</span>
+                </div>
+                <div class="right-content">
+                    <div class="grid-content">
+                        <div class="foto1" style="background-image: url('https://media.licdn.com/dms/image/D5622AQEMZwMNAG6k2A/feedshare-shrink_800/0/1701194022532?e=2147483647&v=beta&t=eVZSJ2EnEmiU6ZuVEmAtDFBV9yAhzg4eY4GvtcT5ea4');"></div>
+                        <div class="foto2" style="background-color: #FBFBFB;"></div>
+                        <div class="foto3" style="background-color: #FBFBFB;"></div>
+                        <div class="foto4" style="background-image: url('https://media.licdn.com/dms/image/D5622AQEMZwMNAG6k2A/feedshare-shrink_800/0/1701194022532?e=2147483647&v=beta&t=eVZSJ2EnEmiU6ZuVEmAtDFBV9yAhzg4eY4GvtcT5ea4');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="left-content">
+                    <h2>Conselho Grupo 300</h2>
+                    <h3>Leonarco Castelo</h3>
+                    <span>CEO 300 GROUP</span>
+                    <h3>Leonadro Castelo</h3>
+                    <span>Vice-presidente 300</span>
+                </div>
+                <div class="right-content">
+                    <div class="grid-content">
+                        <div class="foto1" style="background-image: url('https://media.licdn.com/dms/image/D5622AQEMZwMNAG6k2A/feedshare-shrink_800/0/1701194022532?e=2147483647&v=beta&t=eVZSJ2EnEmiU6ZuVEmAtDFBV9yAhzg4eY4GvtcT5ea4');"></div>
+                        <div class="foto2" style="background-color: #FBFBFB;"></div>
+                        <div class="foto3" style="background-color: #FBFBFB;"></div>
+                        <div class="foto4" style="background-image: url('https://media.licdn.com/dms/image/D5622AQEMZwMNAG6k2A/feedshare-shrink_800/0/1701194022532?e=2147483647&v=beta&t=eVZSJ2EnEmiU6ZuVEmAtDFBV9yAhzg4eY4GvtcT5ea4');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+     new Swiper(".carrossel-aboutus", {
+        spaceBetween: 30,
+        
+    })
+</script>
