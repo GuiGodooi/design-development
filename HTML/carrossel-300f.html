@@ -74,30 +74,32 @@
         .container{
             flex-direction: column-reverse;
             height: 600px;
+            width: 100%;
         }
 
         .carrossel-aboutus h2{
             font-size: 30px;
             line-height: 37px;
             font-weight: 500;
+            display: none;
         }
 
         .carrossel-aboutus h3{
-            font-size: 40px;
-            line-height: 49px;
+            font-size: 20px;
+            line-height: 20px;
             font-weight: 500;
         }
 
         .carrossel-aboutus span{
-            font-size: 24px;
-            line-height: 24px;
+            font-size: 14px;
+            line-height: 10px;
             font-weight: 300;
         }
 
         .left-content{
             width: 100%;
             height: auto;
-            margin: 0px;
+            margin-left: 40px;
         }
 
         .right-content{
@@ -126,22 +128,26 @@
             border: 2px solid #931319;
         }
 
-
-
+        .mobile-style{
+            width: auto;
+            text-align: end;
+            padding-right: 22%;   
+        }
     }
 
 </style>
 
 <div class="carrossel-aboutus swiper">
     <div class="swiper-wrapper">
+
         <div class="swiper-slide">
             <div class="container">
                 <div class="left-content">
                     <h2>Conselho Grupo 300</h2>
-                    <h3>Leonarco Castelo</h3>
-                    <span>CEO 300 GROUP</span>
-                    <h3>Leonadro Castelo</h3>
-                    <span>Vice-presidente 300</span>
+                    <h3>Leonardo Castelo</h3>
+                    <span>CEO 300 Group</span>
+                    <h3 class="mobile-style">Leandro Castelo</h3>
+                    <span class="mobile-style">Vice-presidente 300 Aceleração</span>
                 </div>
                 <div class="right-content">
                     <div class="grid-content">
@@ -153,14 +159,35 @@
                 </div>
             </div>
         </div>
+
         <div class="swiper-slide">
             <div class="container">
                 <div class="left-content">
                     <h2>Conselho Grupo 300</h2>
-                    <h3>Leonarco Castelo</h3>
-                    <span>CEO 300 GROUP</span>
-                    <h3>Leonadro Castelo</h3>
-                    <span>Vice-presidente 300</span>
+                    <h3>Luiz Teixeira</h3>
+                    <span>Vice-presidente 300 Educação</span>
+                    <h3 class="mobile-style">Lucien Newton</h3>
+                    <span class="mobile-style">Vice-presidente 300 Consultoria</span>
+                </div>
+                <div class="right-content">
+                    <div class="grid-content">
+                        <div class="foto1" style="background-image: url('https://media.licdn.com/dms/image/D5622AQEMZwMNAG6k2A/feedshare-shrink_800/0/1701194022532?e=2147483647&v=beta&t=eVZSJ2EnEmiU6ZuVEmAtDFBV9yAhzg4eY4GvtcT5ea4');"></div>
+                        <div class="foto2" style="background-color: #FBFBFB;"></div>
+                        <div class="foto3" style="background-color: #FBFBFB;"></div>
+                        <div class="foto4" style="background-image: url('https://media.licdn.com/dms/image/D5622AQEMZwMNAG6k2A/feedshare-shrink_800/0/1701194022532?e=2147483647&v=beta&t=eVZSJ2EnEmiU6ZuVEmAtDFBV9yAhzg4eY4GvtcT5ea4');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="left-content">
+                    <h2>Conselho Grupo 300 Educação</h2>
+                    <h3>Vinicius Barreto</h3>
+                    <span>Vice-presidente 300 Scale Up</span>
+                    <h3 class="mobile-style">Cristiano Corrêa</h3>
+                    <span class="mobile-style">Vice-presidente 300 Gestão</span>
                 </div>
                 <div class="right-content">
                     <div class="grid-content">
@@ -177,16 +204,18 @@
 
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 <script>
+
      new Swiper(".carrossel-aboutus", {
-        spaceBetween: 30,
-        
+        spaceBetween: 26,
+        loop: true,
     })
+
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
