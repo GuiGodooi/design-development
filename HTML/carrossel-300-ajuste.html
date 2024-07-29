@@ -1,0 +1,389 @@
+<style>
+    .time-line{
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .years-time-line{
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+
+    .years{
+        display: flex;
+        height: 200px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .years span{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .circle-box{
+        height: 30px;
+        width: 30px;
+        background-color: #FFFFFF;
+        border: 1px solid #931319;
+        border-radius: 99px;
+        z-index: 99;
+        margin: 10px 0px;
+    }
+
+    .circle-box.active{
+        background-color: #931319;
+    }
+
+    .circle-box:hover{
+        background-color: #931319;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+    }
+
+    .content-item{
+        display: none;
+        width: 100%;
+        padding-top: 80px;
+    }
+
+    .content-item.active {
+        display: block;
+    }
+
+    .foto-container img{
+        height: 290px;
+        width: 432px;
+        border-radius: 8px;
+    }
+
+    .flex-content{
+        display: flex;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .txt-container{
+        max-width: 553px;
+        padding: 0px;
+        margin: 0px;
+        padding-right: 40px;
+    }
+    
+    .txt-container p{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 15px;
+        color: #1F1F1F;
+    }
+
+    .progress-container {
+        content: '';
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 1.3px;
+        background-color: #1F1F1F;
+        z-index: 0;
+    }
+
+    .progress-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: #931319; /* Cor da % do progresso */
+        transition: width 0.3s ease;
+    }
+
+    @media (max-width: 768px){
+        .years-time-line{
+            width: 100%;
+            overflow-x: scroll;
+            gap: 80px;
+        }
+
+        .years span{
+            font-size: 16px;
+            line-height: 20px;
+            width: 100px;
+        }
+
+
+        .foto-container img{
+            height: 250px;
+            width: 100%;
+            object-fit: cover;    
+        }
+
+        .flex-content{
+            flex-direction: column;
+            width: 100%;
+            gap: 30px;
+        }
+
+        .content-item{
+            padding-top: 30px;
+        }
+
+        .content{
+            padding-right: 20px;
+        }
+
+        .txt-container{
+            padding: 0px;
+        }
+
+        .txt-container p{
+            font-size: 14px;
+            line-height: 23px;
+            padding: 0px 10px;
+        }
+        
+
+
+
+    }
+
+
+</style>
+
+<div class="time-line">
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+    <div class="years-time-line">
+        
+        <div class="years">
+            <br>
+            <div class="circle-box" data-year="2007"></div>
+            <span>2007</span>
+        </div>
+        <div class="years">
+            <br>
+            <div class="circle-box" data-year="2012"></div>
+            <span>2012</span>
+        </div>
+        <div class="years">
+            <br>
+            <div class="circle-box" data-year="2018"></div>
+            <span>2018</span>
+        </div>
+        <div class="years">
+            <span style="font-weight: 300; font-size: 12px; line-height: 20px;">ano estrela</span>
+            <div class="circle-box" data-year="2019" 
+            style="background-image: url('https://300f.pinealmarketing.com.br/wp-content/uploads/2024/07/Grupo-55.svg'); 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: contain;
+            border: none;">
+            </div>
+            <span>2019</span>
+        </div>
+        <div class="years">
+            <br>
+            <div class="circle-box" data-year="2021">
+            </div>
+            <span>2021</span>
+        </div>
+        <div class="years">
+            <br>
+            <div class="circle-box" data-year="2022">
+            </div>
+            <span>2022</span>
+        </div>
+        <div class="years">
+            <br>
+            <div class="circle-box" data-year="2023">
+            </div>
+            <span>2023</span>
+        </div>
+        <div class="years">
+            <br>
+            <div class="circle-box" data-year="2024">
+            </div>
+            <span>2024</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="content-2007" class="content-item">
+            <div class="flex-content">
+                <div class="foto-container">
+                    <img src="https://300f.pinealmarketing.com.br/wp-content/uploads/2024/06/view-futuristic-space-rocket.webp" alt="teste">
+                </div>
+                <div class="txt-container">
+                    <p>
+                        Foi em 2007 que o desafio de empreender começou na vida dos irmãos Leonardo e Leandro Castelo, junto com o seu pai, Edimar Castelo. Eles deixaram os seus cargos em empresas multinacionais, para começar um novo negócio em uma cidade que não conheciam, somente com um objetivo: transformar a vida de toda a família.
+                    </p>
+                    <p>
+                        Inconformados com a atual realidade, colocaram o pé na estrada e deixaram São Paulo para estacionar o seu sonho em Joinville (SC), onde <b>fundaram a Ecoville</b>. Atualmente a marca é a maior franquia de produtos de limpeza do país, mas nem sempre foi assim… 
+                    </p>
+                    <p>
+                        Os primeiros passos da empresa foram marcados por uma série de <b>momentos de dificuldade</b>, com aluguel atrasado, kombi com problemas mecânicos, dormindo no chão do galpão, com pouca comida mas muita persistência. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="content-2012" class="content-item">
+            <div class="flex-content">
+                <div class="foto-container">
+                    <img src="https://300f.pinealmarketing.com.br/wp-content/uploads/2024/06/view-futuristic-space-rocket.webp" alt="teste">
+                </div>
+                <div class="txt-container">
+                    <p>
+                        Foi em 2007 que o desafio de empreender começou na vida dos irmãos Leonardo e Leandro Castelo, junto com o seu pai, Edimar Castelo. Eles deixaram os seus cargos em empresas multinacionais, para começar um novo negócio em uma cidade que não conheciam, somente com um objetivo: transformar a vida de toda a família.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="content-2018" class="content-item">
+            <div class="flex-content">
+                <div class="foto-container">
+                    <img src="https://300f.pinealmarketing.com.br/wp-content/uploads/2024/06/view-futuristic-space-rocket.webp" alt="teste">
+                </div>
+                <div class="txt-container">
+                    <p>
+                        Foi em 2007 que o desafio de empreender começou na vida dos irmãos Leonardo e Leandro Castelo, junto com o seu pai, Edimar Castelo. Eles deixaram os seus cargos em empresas multinacionais, para começar um novo negócio em uma cidade que não conheciam, somente com um objetivo: transformar a vida de toda a família.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="content-2019" class="content-item">
+            <div class="flex-content">
+                <div class="foto-container">
+                    <img src="https://300f.pinealmarketing.com.br/wp-content/uploads/2024/06/view-futuristic-space-rocket.webp" alt="teste">
+                </div>
+                <div class="txt-container">
+                    <p>
+                        Foi em 2007 que o desafio de empreender começou na vida dos irmãos Leonardo e Leandro Castelo, junto com o seu pai, Edimar Castelo. Eles deixaram os seus cargos em empresas multinacionais, para começar um novo negócio em uma cidade que não conheciam, somente com um objetivo: transformar a vida de toda a família.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="content-2021" class="content-item">
+            <div class="flex-content">
+                <div class="foto-container">
+                    <img src="https://300f.pinealmarketing.com.br/wp-content/uploads/2024/06/view-futuristic-space-rocket.webp" alt="teste">
+                </div>
+                <div class="txt-container">
+                    <p>
+                        Foi em 2007 que o desafio de empreender começou na vida dos irmãos Leonardo e Leandro Castelo, junto com o seu pai, Edimar Castelo. Eles deixaram os seus cargos em empresas multinacionais, para começar um novo negócio em uma cidade que não conheciam, somente com um objetivo: transformar a vida de toda a família.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="content-2022" class="content-item">
+            <div class="flex-content">
+                <div class="foto-container">
+                    <img src="https://300f.pinealmarketing.com.br/wp-content/uploads/2024/06/view-futuristic-space-rocket.webp" alt="teste">
+                </div>
+                <div class="txt-container">
+                    <p>
+                        Foi em 2007 que o desafio de empreender começou na vida dos irmãos Leonardo e Leandro Castelo, junto com o seu pai, Edimar Castelo. Eles deixaram os seus cargos em empresas multinacionais, para começar um novo negócio em uma cidade que não conheciam, somente com um objetivo: transformar a vida de toda a família.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="content-2023" class="content-item">
+            <div class="flex-content">
+                <div class="foto-container">
+                    <img src="https://300f.pinealmarketing.com.br/wp-content/uploads/2024/06/view-futuristic-space-rocket.webp" alt="teste">
+                </div>
+                <div class="txt-container">
+                    <p>
+                        Foi em 2007 que o desafio de empreender começou na vida dos irmãos Leonardo e Leandro Castelo, junto com o seu pai, Edimar Castelo. Eles deixaram os seus cargos em empresas multinacionais, para começar um novo negócio em uma cidade que não conheciam, somente com um objetivo: transformar a vida de toda a família.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="content-2024" class="content-item">
+            <div class="flex-content">
+                <div class="foto-container">
+                    <img src="https://300f.pinealmarketing.com.br/wp-content/uploads/2024/06/view-futuristic-space-rocket.webp" alt="teste">
+                </div>
+                <div class="txt-container">
+                    <p>
+                        Foi em 2007 que o desafio de empreender começou na vida dos irmãos Leonardo e Leandro Castelo, junto com o seu pai, Edimar Castelo. Eles deixaram os seus cargos em empresas multinacionais, para começar um novo negócio em uma cidade que não conheciam, somente com um objetivo: transformar a vida de toda a família.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElements = document.querySelectorAll('.years .circle-box');
+    const contentItems = document.querySelectorAll('.content-item');
+    const progressBar = document.querySelector('.progress-bar');
+
+    const totalYears = yearElements.length;
+
+    yearElements.forEach((year, index) => {
+        year.addEventListener('click', function() {
+            // Remover turma ativa de todos os elementos do ano
+            yearElements.forEach(y => y.classList.remove('active'));
+            // Adicionar classe ativa ao elemento de ano clicado
+            this.classList.add('active');
+
+            // Obtenha o valor do atributo data-year
+            const year = this.getAttribute('data-year');
+
+            // Ocultar todos os itens de conteúdo
+            contentItems.forEach(item => item.classList.remove('active'));
+
+            // Mostrar o item de conteúdo que corresponde ao ano clicado
+            document.getElementById(`content-${year}`).classList.add('active');
+
+            // Calcule e defina a largura da barra de progresso
+            const progressPercentage = ((index + 1) / totalYears) * 100;
+            progressBar.style.width = `${progressPercentage}%`;
+        });
+    });
+
+    // Optionally, you can trigger a click on the first year to initialize the display
+    yearElements[0].click();
+});
+
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
