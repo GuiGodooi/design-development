@@ -30,6 +30,10 @@
         font-weight: 200;
         width: 508px;
     }
+
+    .ed-content b{
+        display: none;
+    }
     
     .ed-swiper{
         width: 100%;
@@ -43,12 +47,52 @@
         flex-direction: column;
         gap: 40px;
     }
+
+    @media (max-width: 789px){
+        .ed-content{
+            flex-direction: column;
+            gap: 60px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .ed-content h2{
+            display: none;
+            
+        }
+
+        .ed-content span{
+            font-size: 16px;
+            line-height: 22px;
+            width: 100%;
+            padding: 0px 20px;
+        }
+
+        .ed-content p{
+            font-size: 14px;
+            line-height: 20px;
+            width: 100%;
+            padding: 0px 20px;
+        }
+
+        .ed-content b{
+            display: block;
+            text-align: end;
+            padding-right: 10px;
+            font-size: 14px;
+        }
+
+        .content-slide{
+            gap: 10px;
+        }
+    }
     
     
     </style>
     
     <div class="ed-content">
     <h2>Nossos Produtos e serviços:</h2>
+    <b>deslize para ver mais >></b>
         <div class="ed-swiper swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
