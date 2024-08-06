@@ -1,10 +1,11 @@
 <style>
     .carrossel-aboutus{
-        width: 100%;
+        width: 1200px;
         height: 600px;
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: grab;
         font-family: "Montserrat", sans-serif;
     }
 
@@ -75,21 +76,27 @@
     }
 
     .swiper-button-next{
+        left: 400px !important;
+        top: 380px !important;
         color: #931319 !important;
     }
     
     .swiper-button-prev{
+        left: 100px !important;
+        top: 380px !important;
         color: #931319 !important;
+        
     }
 
     .swiper-pagination{
-       top: 590;
+       top: 370px !important;
+       left: -340px !important;
        z-index: 99;
        display: block;
     }
 
     :root {
-  --swiper-pagination-color: #931319 ;
+  --swiper-pagination-color: #931319;
   --swiper-pagination-bullet-size: 10px;
   --swiper-pagination-bullet-width: 10px;
   --swiper-pagination-bullet-height: 10px;
@@ -102,7 +109,13 @@
 
     /* Create style for mobile response */
     @media (max-width: 794px){
-
+        
+        .carrossel-aboutus{
+            width: 100% !important;
+            height: 680px !important;
+            
+        }
+        
         .containerBox{
             flex-direction: column-reverse;
             height: auto;
@@ -131,7 +144,7 @@
         .left-content{
             width: 100%;
             margin: 0px;
-            height: 150px;
+            height: 170px;
             justify-content: center;
         }
 
@@ -145,16 +158,16 @@
         }
 
         .group{
-            padding-left: 11.6%;
+            width: 100%;
+            margin: 0px;
+            padding: 25px;
         }
 
         .group2{
             text-align: end;
-            width: 350px;
+            width: 100%;
             margin: 0px;
-            padding: 0px;
-            padding-right: 50px;   
-            
+            padding: 25px;
         }
 
         .grid-content{
@@ -182,9 +195,28 @@
 
         .mobile-style{
             width: 100%;
-            height: auto;
+            height: 5px;
             padding: 0px;
             text-align: end;
+        }
+        
+        .carrossel-aboutus .swiper-button-next{
+            left: 92% !important;
+            top: 640px !important;
+            color: #931319 !important;
+        }
+    
+        .carrossel-aboutus  .swiper-button-prev{
+            left: 0px !important;
+            top: 640px !important;
+            color: #931319 !important;
+        }
+
+        .carrossel-aboutus  .swiper-pagination{
+           top: 626px !important;
+           left: 0px !important;
+           z-index: 99;
+           display: block;
         }
 
     }
