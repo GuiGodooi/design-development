@@ -1,7 +1,7 @@
 <style>
     .carrossel-aboutus{
         width: 100%;
-        height: 550px;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -26,7 +26,7 @@
         font-weight: 300;
     }
 
-    .container{
+    .containerBox{
         width: 100%;
         height: 600px;
         display: flex;
@@ -74,10 +74,39 @@
         border: 4px solid #931319;
     }
 
+    .swiper-button-next{
+        color: #931319 !important;
+    }
+    
+    .swiper-button-prev{
+        color: #931319 !important;
+    }
+
+    .swiper-pagination-bullets{
+        
+    }
+
+    .swiper-pagination{
+        padding-top: 200px;
+        
+    }
+
+    :root {
+  --swiper-pagination-color: #931319 ;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-color: #93131990;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+    }
+
     /* Create style for mobile response */
     @media (max-width: 794px){
 
-        .container{
+        .containerBox{
             flex-direction: column-reverse;
             height: auto;
             overflow: hidden;
@@ -169,7 +198,7 @@
     <div class="swiper-wrapper">
 
         <div class="swiper-slide">
-            <div class="container">
+            <div class="containerBox">
                 <div class="left-content">
                     <h2>Conselho Grupo 300</h2>
                     <div class="group">
@@ -180,6 +209,9 @@
                         <h3 class="mobile-style">Leandro Castelo</h3>
                         <span class="mobile-style">Vice-presidente 300 Aceleração</span>
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
                 <div class="right-content">
                     <div class="grid-content">
@@ -193,7 +225,7 @@
         </div>
 
         <div class="swiper-slide">
-            <div class="container">
+            <div class="containerBox">
                 <div class="left-content">
                     <h2>Conselho Grupo 300</h2>
                     <div class="group">
@@ -204,6 +236,10 @@
                         <h3 class="mobile-style">Lucien Newton</h3>
                         <span class="mobile-style">Vice-presidente 300 Consultoria</span>
                     </div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
                 <div class="right-content">
                     <div class="grid-content">
@@ -217,7 +253,7 @@
         </div>
 
         <div class="swiper-slide">
-            <div class="container">
+            <div class="containerBox">
                 <div class="left-content">
                     <h2>Conselho Grupo 300 Educação</h2>
                     <div class="group">
@@ -228,6 +264,9 @@
                         <h3 class="mobile-style">Cristiano Corrêa</h3>
                         <span class="mobile-style">Vice-presidente 300 Gestão</span>
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
                 <div class="right-content">
                     <div class="grid-content">
@@ -256,10 +295,17 @@
         spaceBetween: 180,
         loop: true,
         effect: 'coverflow',
-  coverflowEffect: {
-    rotate: 30,
-    slideShadows: false,
-  },
+        coverflowEffect: {
+            rotate: 30,
+            slideShadows: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     })
 
 </script>

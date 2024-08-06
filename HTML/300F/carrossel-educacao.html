@@ -3,9 +3,6 @@
         font-family: "Montserrat", sans-serif;
         width: 100%;
         height: auto;
-        padding: 0px;
-        margin: 0px;
-        display: flex;
         overflow: hidden;
         gap: 200px;
         color: #2D2D2D;
@@ -15,7 +12,6 @@
         font-size: 30px;
         line-height: 36px;
         min-width: 418px;
-        
     }
     
     .ed-content span{
@@ -38,6 +34,7 @@
     .ed-swiper{
         width: 100%;
         height: auto;
+        position: relative;
     }
     
     .content-slide{
@@ -48,7 +45,15 @@
         gap: 40px;
     }
 
-    @media (max-width: 789px){
+    .title-product{
+
+    }
+
+    .p-product{
+        
+    }
+
+    @media (max-width: 489px){
         .ed-content{
             flex-direction: column;
             gap: 60px;
@@ -91,8 +96,6 @@
     </style>
     
     <div class="ed-content">
-    <h2>Nossos Produtos e serviços:</h2>
-    <b>deslize para ver mais >></b>
         <div class="ed-swiper swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -213,12 +216,10 @@
     
     
     <script>
-        new Swiper(" .ed-swiper ", {
-            spaceBetween: 180,
+        new Swiper(".ed-swiper ", {
+            spaceBetween: 64,
             cursor: 'pointer',
-            loop: true,
-            autoplay: true,
-            
+            loop: true, 
         })
     </script>
     
