@@ -1,0 +1,59 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tijolos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculadora de Tijolos</h2>
+    <label for="largura">Largura da parede (m):</label>
+    <input type="number" id="largura" step="0.01" placeholder="Ex: 3">
+    
+    <label for="altura">Altura da parede (m):</label>
+    <input type="number" id="altura" step="0.01" placeholder="Ex: 2.5">
+    
+    <label for="larguraTijolo">Largura do tijolo (m):</label>
+    <input type="number" id="larguraTijolo" step="0.01" value="0.20">
+    
+    <label for="alturaTijolo">Altura do tijolo (m):</label>
+    <input type="number" id="alturaTijolo" step="0.01" value="0.10">
+    
+    <button onclick="calcularTijolos()">Calcular</button>
+    
+    <h3 id="resultado"></h3>
+    
+    <script>
+        function calcularTijolos() {
+            let largura = parseFloat(document.getElementById('largura').value);
+            let altura = parseFloat(document.getElementById('altura').value);
+            let larguraTijolo = parseFloat(document.getElementById('larguraTijolo').value);
+            let alturaTijolo = parseFloat(document.getElementById('alturaTijolo').value);
+            
+            if (isNaN(largura) || isNaN(altura) || isNaN(larguraTijolo) || isNaN(alturaTijolo) || largura <= 0 || altura <= 0 || larguraTijolo <= 0 || alturaTijolo <= 0) {
+                document.getElementById('resultado').innerText = "Preencha todos os campos corretamente.";
+                return;
+            }
+            
+            let areaParede = largura * altura;
+            let areaTijolo = larguraTijolo * alturaTijolo;
+            let quantidadeTijolos = Math.ceil(areaParede / areaTijolo);
+            
+            document.getElementById('resultado').innerText = `Quantidade estimada: ${quantidadeTijolos} tijolos`;
+        }
+    </script>
+</body>
+</html>
